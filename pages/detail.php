@@ -8,7 +8,7 @@
             <h4 class="nom text-uppercase"></h4>
             <h6 class="text-danger font-weight-bold">$<span class="prix"></span></h6>
             <span class="description"></span>
-            <button class="btn btn-primary w-100 mt-4">
+            <button class="btn btn-primary w-100 mt-4 add-to-cart">
                 <span class="fa fa-shopping-cart px-2"></span>
                 <b>Ajouter au panier</b>
             </button>
@@ -30,7 +30,9 @@
         $(".nom").html(item['nom']);
         $(".prix").html(item['prix']);
         $(".description").html(item['description']);
-
+        $('.add-to-cart').on("click", (e) => {
+            alert(1)
+        })
         // console.log(item);
     })()
 </script>
