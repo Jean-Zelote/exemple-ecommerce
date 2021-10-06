@@ -66,7 +66,9 @@
                                 </div>
                                 `
                                 ).on("click", () => {
-                                    alert(1)
+                                    window.location.href = (`?page=detail&item=${(JSON.stringify(element))}`);
+                                    window.localStorage.setItem('current-item', JSON.stringify(element));
+                                    return false;
                                 })
                                 $('.products-content').append(divitem)
                             });
