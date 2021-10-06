@@ -109,6 +109,8 @@
                             $(".loader-box").addClass("d-none");
                             $(".output-message").removeClass("d-none").html("<b class='text-danger'>Mot de passe ou numero entrer est incorrect !</b>")
                         default:
+                            $(".loader-box").addClass("d-none");
+                            $(".output-message").removeClass("d-none").html("<b class='text-danger'>Une erreur inattendue viens de se produire !</b>")
                             break;
                     }
                 } else {

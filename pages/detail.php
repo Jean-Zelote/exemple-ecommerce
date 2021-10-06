@@ -31,12 +31,15 @@
         $(".prix").html(item['prix']);
         $(".description").html(item['description']);
         $('.add-to-cart').on("click", (e) => {
-            const mycart = window.localStorage.getItem("mycart");
+            let mycart = window.localStorage.getItem("mycart");
             if(mycart){
+                mycart = JSON.parse(mycart);
                 mycart.push(item);
+                localStorage.setItem("mycart", JSON.stringify(mycart));
+                console.log(mycart);
                 window.location.href = ("?page=cart");
             }else{
-                window.localStorage.setItem("mycart", JSON.stringify([item]))
+                window.localStorage.setItem("mycart", JSON.stringify([item]));
                 window.location.href = ("?page=cart");
             }
         })
