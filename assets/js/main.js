@@ -34,7 +34,7 @@
                 })
                 .then(data => {
                     const status = data['data']['status'];
-                    if (!isNaN(parseInt(status)) && parseInt(status)) {
+                    if (!isNaN(parseInt(status)) && parseInt(status) === 200) {
                         const dt = data['data']['data'];
                         if (dt.length > 0) {
                             $('.products-content').html("");
@@ -92,14 +92,22 @@
                 url: isregister ? `${endpoint}/api/clients/register` : `${endpoint}/api/clients/login`
             })
             .then(data => {
-                console.log(data['data'])
+                const status = data['data']['status'];
+                if (!isNaN(parseInt(status)) && parseInt(status) === 200) {
+                    const dt = data['data']['data'];
+
+                } else {
+                    $("output-message").removeClass("d-none").html("<b class='text-danger'>Une erreur viens de se produire !</b>")
+                }
             })
             .catch(err => {
+                $("output-message").removeClass("d-none").html("<b class='text-danger'>Une erreur viens de se produire !</b>")
                 console.log(err)
             })
     }
     $(".connexion-form").on("submit", (e) => {
         e.preventDefault()
+        $("output-message").addClass("d-none").html("<b class='text-danger'>Une erreur viens de se produire !</b>")
         $(".loader-box").removeClass("d-none"); // output-message
         sendform()
     })
