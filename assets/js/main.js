@@ -30,7 +30,8 @@
             axios({
                     method: "GET",
                     url: `${endpoint}/api/products`,
-                    headers
+                    headers,
+                    timeout
                 })
                 .then(data => {
                     const status = data['data']['status'];
@@ -52,7 +53,7 @@
                                         <div class="product-dscr-container">
                                             <div class="product-title">${element.nom}</div>
                                             <div class="product-price">US $${element.prix}</div>
-                                            <div class="oriArea">US $${element.prix - 120}
+                                            <div class="oriArea">US $${element.prix - (element.prix * .20)}
                                                 <div class="discount-block">-20%</div>
                                             </div>
                                             <div class="sold-area">
@@ -89,6 +90,7 @@
                 method: "POST",
                 data: $(".connexion-form").serialize(),
                 headers,
+                timeout,
                 url: isregister ? `${endpoint}/api/clients/register` : `${endpoint}/api/clients/login`
             })
             .then(data => {
@@ -96,6 +98,7 @@
                 if (!isNaN(parseInt(status)) && parseInt(status) === 200) {
                     const dt = data['data']['data'];
                     $(".loader-box").addClass("d-none");
+                    console.log(window.location.search)
                     localStorage.setItem("current-client", dt['client'] ? dt['client'] : null)
                 } else {
                     $(".loader-box").addClass("d-none");
