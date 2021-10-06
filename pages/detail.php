@@ -34,8 +34,10 @@
             const mycart = window.localStorage.getItem("mycart");
             if(mycart){
                 mycart.push(item);
+                window.location.href = ("?page=cart");
             }else{
                 window.localStorage.setItem("mycart", JSON.stringify([item]))
+                window.location.href = ("?page=cart");
             }
         })
     })()
