@@ -97,11 +97,20 @@
             })
             .then(data => {
                 const status = data['data']['status'];
-                if (!isNaN(parseInt(status)) && parseInt(status) === 200) {
-                    const dt = data['data']['data'];
-                    $(".loader-box").addClass("d-none");
-                    console.log(window.location.search)
-                    localStorage.setItem("current-client", dt['client'] ? dt['client'] : null)
+                if (!isNaN(parseInt(status))) {
+                    switch (parseInt(status)) {
+                        case 200:
+                            const dt = data['data']['data'];
+                            $(".loader-box").addClass("d-none");
+                            localStorage.setItem("current-client", dt['client'] ? dt['client'] : null);
+                            window.location.replace("?page=cart")
+                            break;
+                        case 400:
+                            $(".loader-box").addClass("d-none");
+                            $(".output-message").removeClass("d-none").html("<b class='text-danger'>Mot de passe ou numero entrer est incorrect !</b>")
+                        default:
+                            break;
+                    }
                 } else {
                     $(".loader-box").addClass("d-none");
                     $(".output-message").removeClass("d-none").html("<b class='text-danger'>Une erreur viens de se produire !</b>")

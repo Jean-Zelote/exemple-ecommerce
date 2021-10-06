@@ -17,6 +17,6 @@
             }else{
 
             }
-        }else window.location.replace("?page=login?cb=cart")
+        }else window.location.replace("?page=login&cb=cart")
     })()
 </script>
