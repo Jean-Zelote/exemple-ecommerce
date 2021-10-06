@@ -1,6 +1,6 @@
-<div class="w-100 justify-content-center d-flex bg-info px-0 mt-4">
+<div class="w-100 justify-content-center d-flex bg-info px-0 mt-5">
     <form class="col-lg-5 connexion-form px-0" method="POST">
-        <div class="col-lg-12 px-0">
+        <div class="col-lg-12 px-0 mb-2">
             <h4 class="h4">M - Auto | Login</h4>
             <p>Connectez-vous pour puvoir continuer avec vos achats</p>
         </div>
