@@ -31,8 +31,12 @@
         $(".prix").html(item['prix']);
         $(".description").html(item['description']);
         $('.add-to-cart').on("click", (e) => {
-            alert(1)
+            const mycart = window.localStorage.getItem("mycart");
+            if(mycart){
+
+            }else{
+                window.localStorage.setItem("mycart", JSON.stringify([item]))
+            }
         })
-        // console.log(item);
     })()
 </script>
