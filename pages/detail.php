@@ -33,7 +33,7 @@
         $('.add-to-cart').on("click", (e) => {
             const mycart = window.localStorage.getItem("mycart");
             if(mycart){
-
+                mycart.push(item);
             }else{
                 window.localStorage.setItem("mycart", JSON.stringify([item]))
             }
