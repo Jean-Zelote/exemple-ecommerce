@@ -42,11 +42,12 @@
                     </li> -->
                 </ul>
                 <form class="form-inline my-2 my-lg-0 d-flex justify-content-between">
-                    <a href="#" class="mr-2">
-                        <span class="fa fa-user-circle text-primary p-2  border rounded bg-light" style="font-size: large;cursor: pointer;"></span>
-                    </a>
                     <a href="?page=cart" class="mr-2">
                         <span class="fa fa-shopping-cart text-primary p-2  border rounded bg-light mr" style="font-size: large;cursor: pointer;"></span>
+                    </a>
+                    <a href="#" class="mr-2">
+                        <span class="fa fa-user-circle text-primary p-2  border rounded bg-light" style="font-size: large;cursor: pointer;"></span>
+                        <b class="px-2">David Maene</b>
                     </a>
                 </form>
             </div>
