@@ -52,9 +52,9 @@
         </nav>
     </header>
     <div class="container-fluid mt-3">
-        <div class="col-12">
+        <!-- <div class="col-12"> -->
             <?php include("./pages/$page") ?>
-        </div>
+        <!-- </div> -->
     </div>
 
     <!-- Optional JavaScript -->

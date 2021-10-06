@@ -1,3 +1,8 @@
+<div class="w-100 d-none loader-box" style="height: 100vh;">
+    <div class="col-lg-12 d-flex justify-content-center p-0">
+        <img src="assets/imgs/loader_gif.gif" alt="Loader" width="200" height="200" style="mix-blend-mode: multiply;">
+    </div>
+</div>
 <div class="w-100 justify-content-center d-flex bg-info- px-0 mt-5">
     <form class="col-lg-5 connexion-form px-0" method="POST">
         <div class="col-lg-12 px-0 mb-2">
@@ -5,13 +10,15 @@
             <p>Connectez-vous pour puvoir continuer avec vos achats</p>
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail1">Adresse email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <label for="phone">Adresse email</label>
+            <input type="text" name="telephone" class="form-control" id="phone" aria-describedby="emailHelp" placeholder="Enter phone number ex: +243 90...." required>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your phone number with anyone else.</small>
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Mot de passe</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <label for="pwd">Mot de passe</label>
+            <input type="password" name="password" class="form-control" id="pwd" placeholder="Password" required>
+        </div>
+        <div class="form-check my-2 output-message">
         </div>
         <div class="form-check my-2">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">

@@ -84,11 +84,24 @@
             alert("une erreur inconnue vient de se produire")
         }
     }
-    const sendform = async() => {
-
+    const sendform = async(isregister) => {
+        axios({
+                method: "POST",
+                data: $(".connexion-form").serialize(),
+                headers,
+                url: isregister ? `${endpoint}/api/clients/register` : `${endpoint}/api/clients/login`
+            })
+            .then(data => {
+                console.log(data['data'])
+            })
+            .catch(err => {
+                console.log(err)
+            })
     }
-    $(".connexion-form").on("submit", () => {
-        alert(1)
+    $(".connexion-form").on("submit", (e) => {
+        e.preventDefault()
+        $(".loader-box").removeClass("d-none"); // output-message
+        sendform()
     })
     loaddata(null)
 })()
