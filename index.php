@@ -40,8 +40,9 @@
                         <a class="nav-link" href="#">Disabled</a>
                     </li> -->
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <span class=""></span>
+                <form class="form-inline my-2 my-lg-0 d-flex justify-content-between">
+                    <span class="fa fa-user-circle text-primary p-2  border rounded bg-light" style="font-size: large;cursor: pointer;"></span>
+                    <a href="?page="></a>
                 </form>
             </div>
         </nav>
