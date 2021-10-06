@@ -8,7 +8,7 @@
             <h4 class="nom text-uppercase"></h4>
             <h6 class="text-danger font-weight-bold">$<span class="prix"></span></h6>
             <span class="description"></span>
-            <button class="btn btn-primary">
+            <button class="btn btn-primary w-100 mt-4">
                 <span class="fa fa-shopping-cart px-2"></span>
                 <b>Ajouter au panier</b>
             </button>
