@@ -66,8 +66,9 @@
                                 </div>
                                 `
                                 ).on("click", () => {
+
+                                    window.localStorage.setItem('current-item', JSON.stringify(element));                                    
                                     window.location.href = (`?page=detail&item=${(JSON.stringify(element))}`);
-                                    window.localStorage.setItem('current-item', JSON.stringify(element));
                                     return false;
                                 })
                                 $('.products-content').append(divitem)
@@ -131,4 +132,12 @@
         sendform();
     })
     loaddata(null)
+    const addNameSession = () => {
+        const item = localStorage.getItem("current-client");
+        if(item){
+            $(".name-container").html(item['nom']);
+            console.log(item);
+        }
+    }
+    addNameSession()
 })()
