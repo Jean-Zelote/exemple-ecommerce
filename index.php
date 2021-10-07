@@ -47,7 +47,7 @@
                     </a>
                     <a href="#" class="mr-2">
                         <span class="fa fa-user-circle text-primary p-2  border rounded bg-light" style="font-size: large;cursor: pointer;"></span>
-                        <b class="px-2">David Maene</b>
+                        <b class="px-2 name-container">David Maene</b>
                     </a>
                 </form>
             </div>
